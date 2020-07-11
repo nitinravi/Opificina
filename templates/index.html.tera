@@ -1,0 +1,9 @@
+{% extends 'layout' %}
+
+{% block head %}
+<meta name="description" content="A place for shops to display information in a uniform manner for users to access">
+{% endblock %}
+
+{% block body %}
+Hello, world!
+{% endblock %}
