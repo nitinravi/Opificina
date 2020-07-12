@@ -5,5 +5,39 @@
 {% endblock %}
 
 {% block body %}
-Hello, world!
+
+		<!-- Header -->
+		<header id="header">
+			<div class="logo">
+				<span class="fa fa-shopping-cart"></span>
+			</div>
+			<div class="content">
+				<div class="inner">
+					<h1>Opificina</h1>
+					<p>A common platform that connects users and shops.</p>
+				</div>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="user.html">User</a></li>
+					<li><a href="register.html">Shop Owner</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li><a href="elements.html#elements">Elements</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- About -->
+			<article id="about">
+				<h2 class="major">About</h2>
+				<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+				<p>A hackathon submission.</p>
+			</article>
+
+		</div>
+
 {% endblock %}
