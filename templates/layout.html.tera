@@ -19,8 +19,10 @@
     <noscript>
         This website will not work as expected without JavaScript.
     </noscript>
+    <main>
         {% block body %}
         {% endblock %}
+    </main>
     <!-- Footer -->
     <footer id="footer">
         <p class="copyright">&copy; Opificina. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>

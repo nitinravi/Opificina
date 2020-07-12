@@ -2,40 +2,41 @@
 
 {% block head %}
 <meta name="description" content="Create an opificina account">
+<link rel="stylesheet" href="/styles/register.css">
 {% endblock %}
 
 {% block body %}
+    <header>
+        <h1><a href="/">Opificina</a></h1>
+    </header>
     <!-- Elements -->
-    <h2 class="major">Registration</h2>
-
-    <section>
-        <h3 class="major">Enter Shop Details</h3>
-        <form method="post" action="#">
-            <div class="fields">
-                <div class="field half">
-                    <label for="demo-name">Name of Organisation</label>
-                    <input type="text" name="demo-name" id="demo-name" value="" placeholder="Bake Bros" />
-                </div>
-                <div class="field half">
-                    <label for="demo-email">Email</label>
-                    <input type="email" name="demo-email" id="demo-email" value=""
-                        placeholder="jane@bakebros.tld" />
-                </div>
-                <div class="field">
-                    <label for="demo-category">Ownership</label>
-                    <select name="demo-category" id="demo-category">
-                        <option value="">-</option>
-                        <option value="1">Individual Business</option>
-                        <option value="1">Private Organisation</option>
-                        <option value="1">Government Organisation</option>
-                        <option value="1">Other</option>
-                    </select>
-                </div>
+    <h2>Registration</h2>
+    <form>
+        <h3>Enter Shop Details</h3>
+        <div class="fields">
+            <div class="field half">
+                <label for="demo-name">Name of Organisation</label>
+                <input type="text" name="demo-name" id="demo-name" value="" placeholder="Bake Bros" />
             </div>
-            <ul class="actions">
-                <li><input type="submit" value="SUBMIT" class="primary" /></li>
-                <li><input type="reset" value="Reset" /></li>
-            </ul>
-        </form>
-    </section>
+            <div class="field half">
+                <label for="demo-email">Email</label>
+                <input type="email" name="demo-email" id="demo-email" value=""
+                    placeholder="jane@bakebros.tld" />
+            </div>
+            <div class="field">
+                <label for="demo-category">Ownership</label>
+                <select name="demo-category" id="demo-category">
+                    <option value="">-</option>
+                    <option value="1">Individual Business</option>
+                    <option value="1">Private Organisation</option>
+                    <option value="1">Government Organisation</option>
+                    <option value="1">Other</option>
+                </select>
+            </div>
+        </div>
+        <ul class="actions">
+            <li><input type="submit" value="SUBMIT" class="primary" /></li>
+            <li><input type="reset" value="Reset" /></li>
+        </ul>
+    </form>
 {% endblock %}
