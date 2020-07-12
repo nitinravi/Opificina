@@ -32,7 +32,7 @@ fn configure() -> Config {
     // Configure Rocket to serve on the port requested by Heroku.
     let mut config = Config::active().expect("could not load configuration");
     config
-        .set_secret_key(env::var("SECRET_KEY").unwrap())
+        .set_secret_key("qesZQH0uApjQoKWEryTeXnEP1JU+/b4qL22YEIotgQE=")
         .unwrap();
     let port = if let Ok(port_str) = env::var("PORT") {
         port_str.parse().expect("could not parse PORT")
