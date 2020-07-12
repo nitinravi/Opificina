@@ -1,7 +1,135 @@
 main {
-    padding: 0 10vw;
+    padding: 0 25vw;
 }
 
 h2, h3 {
     letter-spacing: 0.1em;
+}
+
+button {
+    background-color: #212121;
+    border: none;
+    color: #FFFFFF;
+    padding: .6em 1.25em;
+}
+
+.formInput {
+    position: relative;
+    padding: 2rem 0 1rem 0;
+    margin: 0 1em 0 1.5em;
+}
+
+.formInput .icon {
+    font-size: 1.5em;
+    position: absolute;
+    top: 2.8rem;
+}
+
+.formInput .error-icon, .formInput .helper-text {
+    display: none;
+}
+
+.formInput label {
+    background-color: var(--bg-secondary);
+    color: #AFAFAF;
+    cursor: text;
+    position: absolute;
+    top: 3rem;
+    left: 3.5rem;
+}
+
+.formInput input, .formInput select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: #00000000;
+    border: 1pt solid #AFAFAF;
+    border-radius: 4px;
+    color: #AFAFAF;
+    margin-left: 2.5rem;
+    padding: 1rem;
+    width: calc(100% - 6rem);
+}
+
+.formInput select {
+    width: calc(100% - 4rem);
+}
+
+.formInput input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.formInput input[type="number"]:hover {
+    -moz-appearance: number-input;
+}
+
+.formInput input[type="password"] {
+    font-size: 0.7rem;
+}
+
+.formInput input:hover, .formInput select:hover {
+    border-color: #FFFFFF;
+}
+
+.formInput input:focus, .formInput select:focus {
+    border: 2px solid #00C853;
+    caret-color: #00C853;
+    color: #FFFFFF;
+    outline: none;
+    outline-offset: 0;
+    padding: calc(1rem - 1px);
+}
+
+.formInput input:focus + label, .formInput select:focus + label {
+    color: #00C853;
+}
+
+.formInput.error input, .formInput input:invalid {
+    border-color: var(--error);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.formInput.error input + label, .formInput input:invalid + label {
+    color: var(--error);
+}
+
+.formInput.error input ~ .error-icon, .formInput input:invalid ~ .error-icon {
+    display: initial;
+    color: var(--error);
+    position: absolute;
+    top: 2.8rem;
+    right: 3rem;
+}
+
+.formInput.error input ~ .helper-text, .formInput input:invalid ~ .helper-text {
+    display: initial;
+    color: var(--error);
+    font-size: 0.75rem;
+    position: absolute;
+    top: 5.5rem;
+    left: 2.8rem;
+}
+
+.formInput.error input:focus, .formInput input:invalid:focus {
+    border-color: var(--error);
+    caret-color: var(--error);
+}
+
+.formInput.error input:focus + label, .formInput input:invalid:focus + label {
+    color: var(--error);
+}
+
+form .buttons {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2.2rem;
+}
+
+button:last-child {
+    margin-left: 1em;
+}
+
+#registerButton {
+    margin-right: 5px;
 }

@@ -14,29 +14,31 @@
     <form>
         <h3>Enter Shop Details</h3>
         <div class="fields">
-            <div class="field half">
-                <label for="demo-name">Name of Organisation</label>
-                <input type="text" name="demo-name" id="demo-name" value="" placeholder="Bake Bros" />
+            <div class="formInput">
+                <span class="icon fa fa-store"></span>
+                <label for="name">Name of Organisation</label>
+                <input type="text" id="name">
             </div>
-            <div class="field half">
-                <label for="demo-email">Email</label>
-                <input type="email" name="demo-email" id="demo-email" value=""
-                    placeholder="jane@bakebros.tld" />
+            <div class="formInput">
+                <span class="icon fa fa-envelope"></span>
+                <label for="email">Email</label>
+                <input type="email" id="email">
             </div>
-            <div class="field">
-                <label for="demo-category">Ownership</label>
-                <select name="demo-category" id="demo-category">
-                    <option value="">-</option>
+            <div class="formInput">
+                <span class="icon fa fa-shopping-cart"></span>
+                <label for="category">Ownership</label>
+                <select id="category">
+                    <option value="" disabled>Select a category</option>
                     <option value="1">Individual Business</option>
-                    <option value="1">Private Organisation</option>
-                    <option value="1">Government Organisation</option>
-                    <option value="1">Other</option>
+                    <option value="2">Private Organisation</option>
+                    <option value="3">Government Organisation</option>
+                    <option value="4">Other</option>
                 </select>
             </div>
         </div>
-        <ul class="actions">
-            <li><input type="submit" value="SUBMIT" class="primary" /></li>
-            <li><input type="reset" value="Reset" /></li>
-        </ul>
+        <div class="buttons">
+            <button type="reset">Reset</button>
+            <button type="submit" id="registerButton">Submit</button>
+        </div>
     </form>
 {% endblock %}
