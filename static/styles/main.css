@@ -1,44 +1,101 @@
-/*
-    Variables
-*/
-
-/* TODO: decide on colorscheme - these are random placeholder values I put */
-
-:root {
-    --bg-primary: #000000;
-    --bg-secondary: #121212;
-    --fg-primary: cyan;
-    --fg-secondary: yellow;
-    --error: #EF5350;
-}
-
-/*
-    Other stuff
-*/
+@import url(fontawesome-all.min.css);
 
 body {
-    background-color: var(--bg-primary);
+    background-image: linear-gradient(to right, #689091, #3f5b68, #689091);
+    font-family: Roboto;
     color: #FFFFFF;
-    font-size: min(4vw, 1rem);
-    margin: 0;
 }
 
-header, footer {
-    background-color: var(--fg-primary);
-    color: var(--bg-primary);
-    padding: 1em;
+a {
+    color: #FFFFFF;
 }
 
-#toast {
-    display: none;
-    background-color: #111111;
-    border-radius: 3px 3px 0 0;
-    box-shadow: 0px 0px 6px 2px rgba(15, 15, 15, 1);
-    color: #FFFFFF;
-    padding: 0.75rem 1rem;
-    position: fixed;
-    left: 50%;
-    bottom: 0;
-    transform: translate(-50%, 0);
-    z-index: 10;
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo {
+    border: 1px solid #FFFFFF;
+    border-radius: 100%;
+    display: block;
+    margin: 2em auto;
+    padding: 1.5em;
+    height: min-content;
+    width: min-content;
+}
+
+header .inner {
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    padding: 1em 5vw;
+}
+
+header h1 {
+    font-family: Noto Sans;
+    letter-spacing: .75em;
+    text-transform: uppercase;
+}
+
+nav ul {
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    display: flex;
+    list-style-type: none;
+    margin-top: 3em;
+    padding: 0;
+}
+
+nav ul li {
+    border: 1px solid #FFFFFF;
+    padding: .75em 0;
+}
+
+nav ul li:hover {
+    background-color: #00000044;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: .75em 2.5em;
+}
+
+#about {
+    font-size: 1.25em;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2em;
+}
+
+footer {
+    text-align: center;
+    opacity: .75;
+}
+
+/*
+    Media Queries
+*/
+
+@media only screen and (max-width: 700px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    header .inner {
+        padding: 1rem 0;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    body {
+        font-size: 4vw;
+    }
+
+    header h1 {
+        letter-spacing: .5em;
+    }
 }

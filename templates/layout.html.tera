@@ -5,29 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}Opificina{% endblock %}</title>
-    <link rel="stylesheet" href="/styles/css/main.css">
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
+    <link rel="stylesheet" href="/styles/main.css">
+    <noscript>
+        <style>
+            body *:not(noscript) {
+                display: none;
+            }
+        </style>
+    </noscript>
     {% block head %}{% endblock %}
 </head>
-<body class="is-preload">
-    <!-- Wrapper -->
-    <div id="wrapper">
+<body>
+    <noscript>
+        This website will not work as expected without JavaScript.
+    </noscript>
         {% block body %}
         {% endblock %}
-        <!-- Footer -->
-        <footer id="footer">
-            <p class="copyright">&copy; Opificina. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-        </footer>
-    </div>
-    <!-- BG -->
-    <div id="bg"></div>
+    <!-- Footer -->
+    <footer id="footer">
+        <p class="copyright">&copy; Opificina. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+    </footer>
 </body>
 <!-- Scripts -->
-<script src="scripts/js/jquery.min.js"></script>
-<script src="scripts/js/browser.min.js"></script>
-<script src="scripts/js/breakpoints.min.js"></script>
-<script src="scripts/js/util.js"></script>
-<script src="scripts/js/main.js"></script>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/main.js"></script>
 {% block javascript %}
 {% endblock %}
 </html>
