@@ -1,1 +1,1 @@
-web: ./target/release/Opificina
+web: ./target/release/opificina
