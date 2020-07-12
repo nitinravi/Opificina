@@ -29,8 +29,7 @@
     </footer>
 </body>
 <!-- Scripts -->
-<script src="scripts/jquery.min.js"></script>
-<script src="scripts/main.js"></script>
+<script src="scripts/jquery-3.5.1.min.js"></script>
 {% block javascript %}
 {% endblock %}
 </html>

@@ -1,3 +1,8 @@
+body {
+    background-color: #3f5b68;
+    background-image: none;
+}
+
 main {
     padding: 0 25vw;
 }
@@ -30,7 +35,7 @@ button {
 }
 
 .formInput label {
-    background-color: var(--bg-secondary);
+    background-color: #3f5b68;
     color: #AFAFAF;
     cursor: text;
     position: absolute;
@@ -132,4 +137,31 @@ button:last-child {
 
 #registerButton {
     margin-right: 5px;
+}
+
+
+/*
+    Media Queries
+*/
+
+@media only screen and (max-width: 850px) {
+    main {
+        padding: 0 15vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        padding: 0 5vw;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    body {
+        font-size: 4vw;
+    }
+
+    header h1 {
+        letter-spacing: 0em;
+    }
 }
