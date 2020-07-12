@@ -67,5 +67,7 @@ fn rocket() -> rocket::Rocket {
 }
 
 fn main() {
-    rocket().launch();
+    let client = "";
+    //let client = Client::connect(&env::var("DATABASE_URL").unwrap(), NoTls).unwrap();
+    rocket().manage(Mutex::new(client)).launch();
 }

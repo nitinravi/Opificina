@@ -867,18 +867,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "musicorum"
-version = "0.1.0"
-dependencies = [
- "chrono",
- "postgres",
- "rocket",
- "rocket_contrib",
- "serde",
- "serde_derive",
-]
-
-[[package]]
 name = "net2"
 version = "0.2.34"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -959,6 +947,18 @@ name = "opaque-debug"
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "624a8340c38c1b80fd549087862da4ba43e08858af025b236e509b6649fc13d5"
+
+[[package]]
+name = "opificina"
+version = "0.1.0"
+dependencies = [
+ "chrono",
+ "postgres",
+ "rocket",
+ "rocket_contrib",
+ "serde",
+ "serde_derive",
+]
 
 [[package]]
 name = "parking_lot"

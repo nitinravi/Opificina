@@ -1,4 +1,5 @@
 @import url(fontawesome-all.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
 
 body {
     background-image: linear-gradient(to right, #689091, #3f5b68, #689091);
@@ -34,7 +35,7 @@ header .inner {
 }
 
 header h1 {
-    font-family: Noto Sans;
+    font-family: Open Sans;
     letter-spacing: .75em;
     text-transform: uppercase;
 }
@@ -68,6 +69,7 @@ nav ul li a {
 }
 
 #about h2 {
+    font-family: Open Sans;
     font-size: 2em;
 }
 
