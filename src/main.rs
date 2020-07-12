@@ -33,11 +33,16 @@ fn get_registration() -> Template {
     Template::render("registration", Context {})
 }
 
+#[get("/browse")]
+fn get_browse() -> Template {
+    Template::render("browse", Context {})
+}
+
 fn configure() -> Config {
     // Configure Rocket to serve on the port requested by Heroku.
     let mut config = Config::active().expect("could not load configuration");
     config
-        .set_secret_key("qesZQH0uApjQoKWEryTeXnEP1JU+/b4qL22YEIotgQE=")
+        .set_secret_key(env::var("SECRET_KEY").unwrap())
         .unwrap();
     let port = if let Ok(port_str) = env::var("PORT") {
         port_str.parse().expect("could not parse PORT")
@@ -55,6 +60,7 @@ fn rocket() -> rocket::Rocket {
             routes![
                 get_index,
                 get_registration,
+                get_browse,
             ],
         )
         .mount("/styles", StaticFiles::from("static/styles"))
@@ -67,7 +73,6 @@ fn rocket() -> rocket::Rocket {
 }
 
 fn main() {
-    let client = "";
-    //let client = Client::connect(&env::var("DATABASE_URL").unwrap(), NoTls).unwrap();
+    let client = Client::connect(&env::var("DATABASE_URL").unwrap(), NoTls).unwrap();
     rocket().manage(Mutex::new(client)).launch();
 }

@@ -18,8 +18,8 @@
         <ul>
             <li><a href="/user">Browse Shops</a></li>
             <li><a href="/registration">Shop Owner</a></li>
-            <li><a href="#about">Information</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="mailto:nitinravi18@gmail.com">Contact Us</a></li>
+            <li><a href="https://github.com/nitinravi/Opificina">GitHub Repo</a></li>
         </ul>
     </nav>
 </header>
