@@ -33,7 +33,6 @@ pub struct RegistrationInfo {
 
 #[get("/")]
 fn get_index(client: State<Mutex<Client>>) -> Template {
-    create_table(&mut client.lock().unwrap());
     Template::render("index", Context {})
 }
 
