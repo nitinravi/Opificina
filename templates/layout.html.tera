@@ -29,14 +29,15 @@
     <div id="bg"></div>
 
 </body>
-{% block javascript %}
-
-    <!-- Scripts -->
+<!-- Scripts -->
     <script src="scripts/js/jquery.min.js"></script>
     <script src="scripts/js/browser.min.js"></script>
     <script src="scripts/js/breakpoints.min.js"></script>
     <script src="scripts/js/util.js"></script>
     <script src="scripts/js/main.js"></script>
+{% block javascript %}
+
+    
 
 {% endblock %}
 </html>

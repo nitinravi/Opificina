@@ -28,6 +28,11 @@ fn get_index() -> Template {
     Template::render("index", Context {})
 }
 
+#[get("/registration")]
+fn get_registration() -> Template {
+    Template::render("registration", Context {})
+}
+
 fn configure() -> Config {
     // Configure Rocket to serve on the port requested by Heroku.
     let mut config = Config::active().expect("could not load configuration");
@@ -49,6 +54,7 @@ fn rocket() -> rocket::Rocket {
             "/",
             routes![
                 get_index,
+                get_registration,
             ],
         )
         .mount("/styles", StaticFiles::from("static/styles"))
