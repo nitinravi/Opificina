@@ -6,38 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}Opificina{% endblock %}</title>
     <link rel="stylesheet" href="/styles/css/main.css">
-    <noscript>
-        <link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
     {% block head %}{% endblock %}
 </head>
-<body>
-
-
 <body class="is-preload">
-
     <!-- Wrapper -->
     <div id="wrapper">
         {% block body %}
         {% endblock %}
         <!-- Footer -->
         <footer id="footer">
-            <p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+            <p class="copyright">&copy; Opificina. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
         </footer>
     </div>
-
     <!-- BG -->
     <div id="bg"></div>
-
 </body>
 <!-- Scripts -->
-    <script src="scripts/js/jquery.min.js"></script>
-    <script src="scripts/js/browser.min.js"></script>
-    <script src="scripts/js/breakpoints.min.js"></script>
-    <script src="scripts/js/util.js"></script>
-    <script src="scripts/js/main.js"></script>
+<script src="scripts/js/jquery.min.js"></script>
+<script src="scripts/js/browser.min.js"></script>
+<script src="scripts/js/breakpoints.min.js"></script>
+<script src="scripts/js/util.js"></script>
+<script src="scripts/js/main.js"></script>
 {% block javascript %}
-
-    
-
 {% endblock %}
 </html>

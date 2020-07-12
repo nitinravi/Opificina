@@ -1,49 +1,43 @@
 {% extends 'layout' %}
 
 {% block head %}
-<meta name="description" content="A place for shops to display information in a uniform manner for users to access">
+<meta name="description" content="Create an opificina account">
 {% endblock %}
 
 {% block body %}
-    <!-- Main -->
-        <div id="main">
+    <!-- Elements -->
+    <article id="elements">
+        <h2 class="major">Registration</h2>
 
-            <!-- Elements -->
-            <article id="elements">
-                <h2 class="major">Registration</h2>
-
-                <section>
-                    <h3 class="major">Enter Shop Details</h3>
-                    <form method="post" action="#">
-                        <div class="fields">
-                            <div class="field half">
-                                <label for="demo-name">Name of Organisation</label>
-                                <input type="text" name="demo-name" id="demo-name" value="" placeholder="Bake Bros" />
-                            </div>
-                            <div class="field half">
-                                <label for="demo-email">Email</label>
-                                <input type="email" name="demo-email" id="demo-email" value=""
-                                    placeholder="jane@bakebros.tld" />
-                            </div>
-                            <div class="field">
-                                <label for="demo-category">Ownership</label>
-                                <select name="demo-category" id="demo-category">
-                                    <option value="">-</option>
-                                    <option value="1">Individual Business</option>
-                                    <option value="1">Private Organisation</option>
-                                    <option value="1">Government Organisation</option>
-                                    <option value="1">Other</option>
-                                </select>
-                            </div>
-                        </div>
-                        <ul class="actions">
-                            <li><input type="submit" value="SUBMIT" class="primary" /></li>
-                            <li><input type="reset" value="Reset" /></li>
-                        </ul>
-                    </form>
-                </section>
-
-            </article>
-
-        </div>
+        <section>
+            <h3 class="major">Enter Shop Details</h3>
+            <form method="post" action="#">
+                <div class="fields">
+                    <div class="field half">
+                        <label for="demo-name">Name of Organisation</label>
+                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Bake Bros" />
+                    </div>
+                    <div class="field half">
+                        <label for="demo-email">Email</label>
+                        <input type="email" name="demo-email" id="demo-email" value=""
+                            placeholder="jane@bakebros.tld" />
+                    </div>
+                    <div class="field">
+                        <label for="demo-category">Ownership</label>
+                        <select name="demo-category" id="demo-category">
+                            <option value="">-</option>
+                            <option value="1">Individual Business</option>
+                            <option value="1">Private Organisation</option>
+                            <option value="1">Government Organisation</option>
+                            <option value="1">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <ul class="actions">
+                    <li><input type="submit" value="SUBMIT" class="primary" /></li>
+                    <li><input type="reset" value="Reset" /></li>
+                </ul>
+            </form>
+        </section>
+    </article>
 {% endblock %}
