@@ -8,9 +8,9 @@ extern crate serde_derive;
 use postgres::{Client, NoTls};
 use rocket::{
     http::{Cookie, Cookies},
-    request::{self, Form, FromRequest, Request},
-    response::{self, NamedFile, Redirect, Responder},
-    Config, Outcome, Response, State,
+    request::Form,
+    response::{self, Redirect, Responder},
+    Config, State,
 };
 use rocket_contrib::{serve::StaticFiles, templates::Template};
 use std::{env, sync::Mutex};
@@ -23,8 +23,17 @@ use db_operations::*;
 struct Context {
 }
 
+#[derive(FromForm)]
+pub struct RegistrationInfo {
+    name: String,
+    email: String,
+    password: String,
+    category: String,
+}
+
 #[get("/")]
-fn get_index() -> Template {
+fn get_index(client: State<Mutex<Client>>) -> Template {
+    create_table(&mut client.lock().unwrap());
     Template::render("index", Context {})
 }
 
@@ -36,6 +45,15 @@ fn get_registration() -> Template {
 #[get("/browse")]
 fn get_browse() -> Template {
     Template::render("browse", Context {})
+}
+
+#[post("/register", data = "<registration_info>")]
+fn post_register(
+    client: State<Mutex<Client>>,
+    registration_info: Form<RegistrationInfo>,
+    cookies: Cookies
+) -> String {
+    register(&mut client.lock().unwrap(), registration_info, cookies)
 }
 
 fn configure() -> Config {
@@ -61,6 +79,7 @@ fn rocket() -> rocket::Rocket {
                 get_index,
                 get_registration,
                 get_browse,
+                post_register,
             ],
         )
         .mount("/styles", StaticFiles::from("static/styles"))

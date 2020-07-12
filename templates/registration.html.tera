@@ -28,10 +28,10 @@
                 <span class="icon fa fa-shopping-cart"></span>
                 <select id="category">
                     <option value="" disabled>Select a category</option>
-                    <option value="1">Individual Business</option>
-                    <option value="2">Private Organisation</option>
-                    <option value="3">Government Organisation</option>
-                    <option value="4">Other</option>
+                    <option value="Individual Business">Individual Business</option>
+                    <option value="Private Organisation">Private Organisation</option>
+                    <option value="Government Organisation">Government Organisation</option>
+                    <option value="Other">Other</option>
                 </select>
                 <label for="category">Ownership</label>
             </div>

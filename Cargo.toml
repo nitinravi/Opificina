@@ -11,3 +11,6 @@ serde = "1.0"
 serde_derive = "1.0"
 postgres = { version = "0.17.4", features = ["with-chrono-0_4"] }
 chrono = "0.4.13"
+rand = "0.7"
+rand_hc = "0.2.0"
+rust-argon2 = "0.8.2"
